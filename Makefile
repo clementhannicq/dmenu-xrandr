@@ -1,7 +1,7 @@
 .PHONY: build
 build:
-	@pipenv run pyinstaller --onefile main.py
+	@pipenv run pyinstaller --onefile dmenuxrandr/main.py -p ./dmenuxrandr
 
 .PHONY: run
 run:
-	@pipenv run python main.py
+	@pipenv run python dmenuxrandr/main.py

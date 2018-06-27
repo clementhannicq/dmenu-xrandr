@@ -43,7 +43,7 @@ def run_shutdown(selected_output):
     set_off(selected_output['name'])
 
 
-def __main__():
+def run():
     try:
         outputs = get_xrandr()
 
@@ -84,5 +84,5 @@ def __main__():
     except InvalidValue:
         pass
 
-
-__main__()
+if __name__ == "__main__":
+    run()
