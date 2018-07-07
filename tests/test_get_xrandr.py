@@ -1,11 +1,12 @@
 from unittest import TestCase
 from unittest.mock import patch
+import os
 
 from dmenuxrandr.xrandr import get_xrandr
 
 
 def read_from_file(path):
-    with open('./xrandr_fixtures/' + path, 'rb') as xrandr_output_file:
+    with open(os.path.dirname(os.path.realpath(__file__)) + '/xrandr_fixtures/' + path, 'rb') as xrandr_output_file:
         return xrandr_output_file.read()
 
 
