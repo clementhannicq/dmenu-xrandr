@@ -1,8 +1,8 @@
 import re
 from subprocess import check_output, call
 
-outputLine = re.compile('^([^ ]*) (connected|disconnected)( primary)?( \d+x\d+\+\d+\+\d+)?.*$')
-modeLine = re.compile('^ +([^ ]+)')
+outputLine = re.compile(r'^([^ ]*) (connected|disconnected)( primary)?( \d+x\d+\+\d+\+\d+)?.*$')
+modeLine = re.compile(r'^ +([^ ]+)')
 
 
 def get_xrandr():
